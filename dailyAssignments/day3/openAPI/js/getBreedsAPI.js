@@ -7,7 +7,8 @@ function getAllBreeds(id){
             document.getElementById(id).innerHTML = JSON.stringify(data, undefined, 2);
         }
       };
-    request.open('GET',url_string , true) 
+    request.open('GET',url_string , true)
+    request.setRequestHeader("X-Requested-With", "XMLHttpRequest"); 
     request.send();
 }
 
