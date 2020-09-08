@@ -10,7 +10,7 @@ function getDomainInfo(id, param){
         }
       };
     request.open('GET',url_string , true) 
-    request.setRequestHeader( 'Access-Control-Allow-Origin', 'api.domainsdb.info');
+    request.setRequestHeader( 'Access-Control-Allow-Origin', '*');
     request.send();
     return false;
 }
