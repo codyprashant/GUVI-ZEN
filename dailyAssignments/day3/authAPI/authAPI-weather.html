@@ -31,16 +31,16 @@
             <h4> CORS API </h4>
         </div>
         <div class="card-body">
-          <h5 class="card-title">Reading data from CORS based API using Domains DB API from <a href="https://api.domainsdb.info/v1/" target= "_blank"> https://api.domainsdb.info/v1/</a></h5>
-          <p class="card-text">Please enter domain name and click on fetch data to receive the data.</p>
+          <h5 class="card-title">Reading data from API Key based Open weather map API from <a href="https://api.openweathermap.org/" target= "_blank"> https://api.openweathermap.org/</a></h5>
+          <p class="card-text">Please enter city name and click on fetch data to receive weather information.</p>
           <p class="card-text">
             
-                Get all details of entered domain
+                Get weather details of entered city
                 <div class="form-group">
-                  <input type="text" class="form-control" id="domainName">
+                  <input type="text" class="form-control" id="cityName">
                 </div>
                 
-                <button type="submit" class="btn btn-primary mb-2" onclick="getDomainInfo('fetchedData', 'domainName');">Get Details</button>
+                <button type="submit" class="btn btn-primary mb-2" onclick="getWeatherInfo('fetchedData', 'cityName');">Get Details</button>
               
         </p>
        
@@ -78,4 +78,4 @@
 </footer>
 <script src="../../../js/jquery-3.5.1.slim.min.js"></script>
 <script src="../../../js/bootstrap.bundle.js"></script>
-<script src="./js/getDomainAPI.js"></script>
+<script src="./js/getWeather.js"></script>
