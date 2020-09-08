@@ -1,6 +1,6 @@
 function getAllBreeds(id){
     var request = new XMLHttpRequest()
-    var url_string = 'https://cors-anywhere.herokuapp.com/https://dog.ceo/api/breeds/list/all';
+    var url_string = 'https://dog.ceo/api/breeds/list/all';
     request.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             var data = JSON.parse(this.responseText);
@@ -8,7 +8,6 @@ function getAllBreeds(id){
         }
       };
     request.open('GET',url_string , true) 
-    request.setRequestHeader('origin', 'https://prashant-guvi.netlify.app/')
     request.send();
 }
 
