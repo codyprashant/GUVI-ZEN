@@ -1,7 +1,7 @@
 function getDomainInfo(id, param){
     var request = new XMLHttpRequest()
     var domainnme = document.getElementById(param).value;
-    var url_string = 'http://cors-anywhere.herokuapp.com/https://api.domainsdb.info/v1/domains/search?domain='+ domainnme;
+    var url_string = 'https://cors-anywhere.herokuapp.com/https://api.domainsdb.info/v1/domains/search?domain='+ domainnme;
     console.log(url_string)
     request.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
