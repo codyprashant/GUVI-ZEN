@@ -8,7 +8,7 @@ function getAllBreeds(id){
         }
       };
     request.open('GET',url_string , true)
-    request.setRequestHeader("X-Requested-With", "XMLHttpRequest"); 
+    request.setRequestHeader('origin', '*'); 
     request.send();
 }
 
