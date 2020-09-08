@@ -8,6 +8,7 @@ function getAllBreeds(id){
         }
       };
     request.open('GET',url_string , true) 
+    request.setRequestHeader('origin', 'https://prashant-guvi.netlify.app/')
     request.send();
 }
 
