@@ -11,6 +11,7 @@ function getDomainInfo(id, param){
       };
     request.open('GET',url_string , true) 
     request.setRequestHeader( 'Access-Control-Allow-Origin', 'https://prashant-guvi.netlify.app/');
+    request.setRequestHeader( 'Access-Control-Allow-Methods', 'GET');
     request.send();
     return false;
 }
