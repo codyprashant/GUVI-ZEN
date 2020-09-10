@@ -28,46 +28,46 @@
 <!-- Begin page content -->
 <main role="main" class="flex-shrink-0">
   <div class="container-fluid">
-    <h1 class="mt-5">JavaScript: Daily Assignments -> Day 4</h1>
+    <h1 class="mt-5">JavaScript: Daily Assignments -> Day 5</h1>
     <div class="row row-cols-1 row-cols-md-1">
       <div class="card" style="max-width: 100%;">
         <div class="card-header">
-          <h4>Function with two params  </h4>
+          <h4>Class 0: Write a calculator </h4>
         </div>
         <div class="card-body">
-          <h5 class="card-title">Write a function which takes 2 params and perform the operations based on params.
-          <br />  
-          1. Operation<br />
-          2. Function array 
+          <h5 class="card-title">write a class of calendar and implement multiple operations and use them from other class showcasing OOPS concept.
           </h5>
           <p class="card-text">
             <pre>
                       <code id = "problem1">
-    function something(oper,arr) {
-      var parm1 = 100 , param2 = 20;
-      console.log(eval(arr[oper](parm1, param2)))
-    }
+    class Calculator {
 
-    function add(a,b){
-      return a+b;
-    }
+        addition(a,b){
+          return a+b;
+        }
 
-    function sub(a,b){
-      return a-b;
+        subtract(a,b){
+          return a-b;
+        }
+
+        multiply(a,b){
+          return a*b;
+        }
+        
+        division(a,b){
+          return a/b;
+        }
     }
     
-    function mul(a,b){
-      return a*b;
-    }
+    let calc = new Calculator();
     
-    function div(a,b){
-      return a/b;
-    }
+    console.log(calc.addition(4,5)); // 9
     
-    let aa = [add,sub,mul,div];
+    console.log(calc.subtract(4,5)); // -1
     
-    something(0,aa); // 120
-    something(2,aa); // 2000
+    console.log(calc.multiply(4,5)); // 20
+    
+    console.log(calc.division(20,5)); // 4
                       </code>
                     </pre>
             </p>
