@@ -33,42 +33,26 @@
       <div><button onclick="generatePDF()" style="float:right;">Download as PDF</button></div>
       <div class="card" style="max-width: 100%;"  id="generateDoc">
         <div class="card-header">
-          <h4>Class 0: Write a calculator </h4>
+          <h4>Class 1: Movie Basics </h4>
         </div>
         <div class="card-body">
-          <h5 class="card-title">Write a class of calendar and implement multiple operations and use them from other class showcasing OOPS concept.
+          <h5 class="card-title">Write a class of Movie and complete other tasks mentioned under "Class 1: basics" on <a href="https://docs.google.com/document/d/1AB04kg6FD9UuJgfW3P9Ml_Ol9tFCNJRVT2mx4jPKK3U/edit" target ="_blank">OOPS - task</a> document .
           </h5>
           <p class="card-text">
             <pre>
                       <code id = "problem1">
-    class Calculator {
-
-        addition(a,b){
-          return a+b;
-        }
-
-        subtract(a,b){
-          return a-b;
-        }
-
-        multiply(a,b){
-          return a*b;
-        }
-
-        division(a,b){
-          return a/b;
+    class Movie {
+      constructor(title, studio, rating='PG') {
+        this.title = title;
+        this.studio = studio;
+        this.rating = rating;
+      }
+        getPG(movieArray){
+        var filteredRec = movieArray.filter((movieRec ) => movieRec =='PG' )
+          return filteredRec;
         }
     }
-    
-    let calc = new Calculator();
-    
-    console.log(calc.addition(4,5)); // 9
-    
-    console.log(calc.subtract(4,5)); // -1
-    
-    console.log(calc.multiply(4,5)); // 20
-    
-    console.log(calc.division(20,5)); // 4
+    let mov = new Movie('Casiono Royale', 'Eon Productions', 'PG13');
                       </code>
                     </pre>
             </p>
