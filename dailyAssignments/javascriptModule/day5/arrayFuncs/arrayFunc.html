@@ -1,0 +1,153 @@
+<link href="/css/bootstrap.css" rel="stylesheet">
+<link href="/css/sticky-footer-navbar.css" rel="stylesheet">
+
+<header>
+  <!-- Fixed navbar -->
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="/index.html">GUVI | codyPrashant</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item ">
+          <a class="nav-link" href="/index.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/dailyAssignments/javascriptModule/assignHome.html">Javascript</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/dailyAssignments/htmlCssModule/assignHome.html">HTML</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<!-- Begin page content -->
+<main role="main" class="flex-shrink-0">
+  <div class="container-fluid">
+    <h1 class="mt-5">JavaScript: Daily Assignments -> Day 5</h1>
+    <div class="row row-cols-1 row-cols-md-1">
+      <div><button onclick="generatePDF()" style="float:right;">Download as PDF</button></div>
+      <div class="card" style="max-width: 100%;"  id="generateDoc">
+        <div class="card-header">
+          <h4>Applying array functions on Rest countries data  </h4>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Solving problems using array functions on restcountries data.</h5>
+          <h6 class="card-title">Get all the countries from Asia continent using Filter function</h6>
+          <p class="card-text">
+            <pre>
+                      <code id = "problem1">
+    var request = new XMLHttpRequest()
+    var url_string = 'https://restcountries.eu/rest/v2/all';
+    
+    // Open a new connection, using the GET request on the URL endpoint
+    request.open('GET',url_string , true) 
+    request.send();
+    request.onload = function() {
+        var data = JSON.parse(this.response);
+        var filteredData = data.filter((singleData) => singleData.region == "Asia")
+        console.log(filteredData);
+    }
+                      </code>
+                    </pre>
+            </p>
+
+
+            <h6 class="card-title">Get all the countries with population of less than 2 lacs using Filter function</h6>
+          <p class="card-text">
+            <pre>
+                      <code id = "problem1">
+    var request = new XMLHttpRequest()
+    var url_string = 'https://restcountries.eu/rest/v2/all';
+    
+    // Open a new connection, using the GET request on the URL endpoint
+    request.open('GET',url_string , true) 
+    request.send();
+    request.onload = function() {
+        var data = JSON.parse(this.response);
+        var filteredData = data.filter((singleData) => singleData.region == "Asia")
+        console.log(filteredData);
+    }
+                      </code>
+                    </pre>
+            </p>
+
+        
+              <h6 class="card-title">Print the following details name, capital, flag using forEach function</h6>
+              <p class="card-text">
+                <pre>
+                          <code id = "problem1">
+        var request = new XMLHttpRequest()
+        var url_string = 'https://restcountries.eu/rest/v2/all';
+        
+        // Open a new connection, using the GET request on the URL endpoint
+        request.open('GET',url_string , true) 
+        request.send();
+        request.onload = function() {
+            var data = JSON.parse(this.response);
+            data.forEach((singleData) => console.log(singleData.name +", "+singleData.capital +", "+singleData.flag))
+        }
+                          </code>
+                        </pre>
+                </p>
+
+                <h6 class="card-title">Print the total population of countries using reduce function</h6>
+              <p class="card-text">
+                <pre>
+                          <code id = "problem1">
+        var request = new XMLHttpRequest()
+        var url_string = 'https://restcountries.eu/rest/v2/all';
+        
+        // Open a new connection, using the GET request on the URL endpoint
+        request.open('GET',url_string , true) 
+        request.send();
+        request.onload = function() {
+            var data = JSON.parse(this.response);
+            var filteredData = data.reduce((total, singleData) => {return singleData.population + parseInt(total)}, 0)
+            console.log(filteredData);
+        }
+                          </code>
+                        </pre>
+                </p>
+
+                <h6 class="card-title">Print the total population of countries in Asia continent using reduce and filter function</h6>
+              <p class="card-text">
+                <pre>
+                          <code id = "problem1">
+        var request = new XMLHttpRequest()
+        var url_string = 'https://restcountries.eu/rest/v2/all';
+        
+        // Open a new connection, using the GET request on the URL endpoint
+        request.open('GET',url_string , true) 
+        request.send();
+        request.onload = function() {
+            var data = JSON.parse(this.response);
+            var filteredData = data.filter((singleData) => singleData.region == "Asia").reduce((total, singleData) => {
+              return singleData.population + parseInt(total)
+            }, 0)
+            console.log(filteredData);
+        }
+                          </code>
+                        </pre>
+                </p>
+
+         
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer fixed-bottom mt-auto py-3">
+  <div class="container-fluid">
+    <span class="text-muted">Designed with <i class="fas fa-heart" style="color:red"></i> by Prashant Gupta(<a
+        href="https://github.com/codyprashant" style="color: crimson;">@codyPrashant</a>)</span>
+  </div>
+</footer>
+<script src="/js/jquery-3.5.1.slim.min.js"></script>
+<script src="/js/bootstrap.bundle.js"></script>
+<script src="/js/html2pdf.bundle.js"></script>
+<script src="/js/customCreatePdf.js"></script>

@@ -1,0 +1,120 @@
+<link href="/css/bootstrap.css" rel="stylesheet">
+<link href="/css/sticky-footer-navbar.css" rel="stylesheet">
+
+<header>
+  <!-- Fixed navbar -->
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="/index.html">GUVI | codyPrashant</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item ">
+          <a class="nav-link" href="/index.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/dailyAssignments/javascriptModule/assignHome.html">Javascript</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/dailyAssignments/htmlCssModule/assignHome.html">HTML</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<!-- Begin page content -->
+<main role="main" class="flex-shrink-0">
+  <div class="container-fluid">
+    <h1 class="mt-5">JavaScript: Daily Assignments -> Day 5</h1>
+    <div class="row row-cols-1 row-cols-md-1">
+      <div><button onclick="generatePDF()" style="float:right;">Download as PDF</button></div>
+      <div class="card" style="max-width: 100%;"  id="generateDoc">
+        <div class="card-header">
+          <h4>Applying arrow functions</h4>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Solving problems using arrow functions.</h5>
+          <h6 class="card-title">Print odd numbers in an array</h6>
+          <p class="card-text">
+            <pre>
+                      <code id = "problem1">
+      var arr =[2, 3, 4, 5, 6, 7];
+      var odd = arr.filter((num) => num % 2 == 0);
+      console.log(odd);
+                      </code>
+                    </pre>
+            </p>
+
+
+            <h6 class="card-title">Convert all the Strings to uppercase in a string array</h6>
+            <p class="card-text">
+              <pre>
+                        <code id = "problem1">
+        var strarr = ["Prashant", "Gupta", "javascript"];
+        var result = strarr.map((str) => str.toUpperCase());
+        console.log(result);
+                        </code>
+                      </pre>
+              </p>
+
+            <h6 class="card-title">Sum of all numbers in an array</h6>
+          <p class="card-text">
+            <pre>
+                      <code id = "problem1">
+        var arr =[2, 3, 4, 5, 6, 7];
+        var sum = arr.reduce((total, num) => {return num + total},0);
+        console.log(sum)
+                      </code>
+                    </pre>
+            </p>
+
+            <h6 class="card-title">Return all the prime numbers in an array</h6>
+            <p class="card-text">
+              <pre>
+                        <code id = "problem1">
+        var arr =[ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16,  17,  18,  19,  20];
+        var odd = arr.filter((num) => {
+          if(num == 2 || num == 3 || num == 5 || num == 7)
+              return num;
+          else if(num != 0 && num != 1 && num % 2 != 0 && num % 3 != 0 && num % 5 != 0 && num % 7 != 0)
+              return num
+        });
+        console.log(odd);
+                        </code>
+                      </pre>
+              </p>
+
+              <h6 class="card-title">Return all the palindromes in an array </h6>
+              <p class="card-text">
+                <pre>
+                          <code id = "problem1">
+        var strarr = ["Prashant", "Gupta", "javascript", "eye", "refer", "Wow", "1991"];
+        var palindromes = strarr.filter((str) => {
+          var re = /[^A-Za-z0-9]/g;
+          var modString = str.toLowerCase().replace(re, '');
+          return (modString == modString.split('').reverse().join(''))
+        });
+        console.log(palindromes)
+                          </code>
+                        </pre>
+                </p>
+
+               
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer fixed-bottom mt-auto py-3">
+  <div class="container-fluid">
+    <span class="text-muted">Designed with <i class="fas fa-heart" style="color:red"></i> by Prashant Gupta(<a
+        href="https://github.com/codyprashant" style="color: crimson;">@codyPrashant</a>)</span>
+  </div>
+</footer>
+<script src="/js/jquery-3.5.1.slim.min.js"></script>
+<script src="/js/bootstrap.bundle.js"></script>
+<script src="/js/html2pdf.bundle.js"></script>
+<script src="/js/customCreatePdf.js"></script>
