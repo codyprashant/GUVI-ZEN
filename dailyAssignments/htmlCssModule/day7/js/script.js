@@ -1,11 +1,23 @@
 function getrandomNumber() {
-    // var randno = Math.floor(Math.random() * (99999999 - 1000000 + 1) ) + 1000000;
-
-    var array = [1,2,3,4,5,6,7,8,9];
-    var unique = array.map((a) => [Math.random(),a]).sort((a,b) => a[0]-b[0]).map((a) => a[1]);
-    var result = unique.join('');
-    document.getElementById('fetchedData').innerHTML = result;
+var result =''
+ while(result.length != 9){
+    if(result.length == 8){
+        document.getElementById('fetchedData').innerHTML = result;
+        break;
+    } else{
+        var temp = (generateNum(1, 9)).toString();
+        if(!result.includes(temp)){
+            result = result + temp;
+        }
+    } 
+}   
 }
+
+function generateNum (min, max) {
+    var randNumber = Math.floor(Math.random()*(max - min + 1)) + min;
+    return randNumber;
+  }
+
 
 function getCalculated(){
     // var DOB = "March 1, 1995";
